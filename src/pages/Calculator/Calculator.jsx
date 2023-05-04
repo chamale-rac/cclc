@@ -3,13 +3,13 @@ import { Keyboard, Display } from '@components'
 import * as styles from './Calculator.module.css'
 
 function Calculator() {
-  const [value, setValue] = useState(-100)
-  const [stockValues, setStockValue] = useState([]) // [{value: 100, operator: '+'}, {value: 200, operator: '-'}]
+  const [value, setValue] = useState('0')
+  const [stockValues, setStockValues] = useState([]) // [{value: 100, operator: '+'}, {value: 200, operator: '-'}]
   const [previous, setPrevious] = useState(null)
 
   const clearCalculator = () => {
-    setValue(0)
-    setStockValue([])
+    setValue('0')
+    setStockValues([])
   }
   const toggleSign = () => setValue((prevValue) => -prevValue)
 
@@ -20,6 +20,7 @@ function Calculator() {
 
   const handleEqual = (operator) => {
     handleOperator(operator)
+    setPrevious(null)
 
     const equal = stockValues
       .slice(1)
@@ -29,18 +30,31 @@ function Calculator() {
         if (lastOperator === '+') {
           return accumulator + parseFloat(num)
         }
+        if (lastOperator === '-') {
+          return accumulator - parseFloat(num)
+        }
+        if (lastOperator === '*') {
+          return accumulator * parseFloat(num)
+        }
+        if (lastOperator === '/') {
+          return accumulator / parseFloat(num)
+        }
+        if (lastOperator === '%') {
+          return accumulator % parseFloat(num)
+        }
         return accumulator
       }, parseFloat(stockValues[0].num))
 
     setValue(equal)
+    setStockValues([])
   }
 
   const inputDecimal = () =>
-    !value.includes('.') && setValue((prevValue) => `${prevValue}.`)
+    !value.toString().includes('.') && setValue((prevValue) => `${prevValue}.`)
 
   // LOL it's a joke, cuase the number is a string then it is just appended. ✨ Perfect.
   const inputDigit = (number) =>
-    value === 0 || previous === 'operator' || number === '0'
+    value === '0' || previous === 'operator'
       ? (setValue(number), setPrevious(null))
       : setValue((prevValue) => prevValue + number)
 
