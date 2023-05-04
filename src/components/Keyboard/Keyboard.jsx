@@ -15,6 +15,7 @@ function Keyboard({ keys }) {
             value={key.value}
             type={key.type}
             action={key.action}
+            customKey={key.key}
           />
         )
       })}
