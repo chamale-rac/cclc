@@ -1,0 +1,21 @@
+.container {
+  height: 82vh;
+  width: 100vw;
+  display: grid;
+  background-color: #c2f30a;
+}
+.container {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 90px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1em 1em;
+  grid-template-areas:
+    '. . . .'
+    '. . . .'
+    '. . . .'
+    '. . . .'
+    'zero zero . .';
+}

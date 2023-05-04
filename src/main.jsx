@@ -4,6 +4,7 @@ import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+import Calculator from '@pages/Calculator/Calculator'
 import ErrorPage from '@/error-page'
 
 import { AppProvider } from '@/context/context'
@@ -11,7 +12,7 @@ import { AppProvider } from '@/context/context'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>Hello world!</div>,
+    element: <Calculator />,
     errorElement: <ErrorPage />,
   },
 ])

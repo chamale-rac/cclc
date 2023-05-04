@@ -1,0 +1,47 @@
+.key {
+  font-family: 'TT Bricks Trial', sans-serif;
+  color: #f94149;
+  background-color: #c2f30a;
+  font-weight: 300;
+  font-size: 70px;
+  border: 1px;
+  border-style: solid;
+  border-color: #f94149;
+  text-align: center;
+
+  border-radius: 90px;
+
+  padding: 10px;
+
+  text-shadow: 10px 10px #f9414a30;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+  transform: translateY(0px) translateX(0px);
+
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.1s ease-in-out, background-color 0.2s ease-out;
+}
+
+.key:hover {
+  background-color: #f94149;
+  color: #c2f30a;
+  box-shadow: rgba(240, 46, 170, 0.4) 2px 2px, rgba(240, 46, 170, 0.3) 4px 4px,
+    rgba(240, 46, 170, 0.2) 6px 6px, rgba(240, 46, 170, 0.1) 8px 8px,
+    rgba(240, 46, 170, 0.05) 10px 10px;
+  transform: translateY(4px) translateX(4px);
+}
+
+._function {
+}
+
+.operator {
+}
+
+.digit,
+.decimal {
+}
+
+.zero {
+  grid-area: zero;
+}
