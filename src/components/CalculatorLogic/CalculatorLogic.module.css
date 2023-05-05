@@ -2,3 +2,13 @@
   width: 100vw;
   height: 100vh;
 }
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    background-color: #c2f30a;
+    align-items: center;
+    justify-content: center;
+  }
+}
