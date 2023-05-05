@@ -1,4 +1,5 @@
 .key {
+  user-select: none;
   font-family: 'TT Bricks Trial', sans-serif;
   color: #f94149;
   background-color: #c2f30a;

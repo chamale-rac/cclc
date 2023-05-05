@@ -17,15 +17,21 @@
 }
 
 .text {
+  background-color: #c2f30a;
+  resize: none;
+  overflow-y: hidden;
+
+  width: 100%;
+  height: 90%;
+  overflow-x: scroll;
+  white-space: nowrap;
+
   line-height: 1.3;
   text-shadow: 10px 10px #f9414a30;
   font-size: 100px;
   font-family: 'TT Bricks Trial', sans-serif;
   background-color: transparent;
   font-weight: 300;
-  border: 1px;
-  border-style: solid;
-  border-color: #f94149;
   text-align: center;
 
   border-radius: 20px;
@@ -34,15 +40,62 @@
   display: flex;
   align-items: end;
   justify-content: end;
+
   text-align: end;
-  width: 100%;
-  height: 90%;
+
+  border: 1px;
+  border-style: solid;
+  border-color: #f94149;
   color: #f94149;
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
     rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
     rgba(240, 46, 170, 0.05) 25px 25px;
   /*TODO modify this for avoid text-shadow to be hidden horizontally*/
   letter-spacing: 6px;
+}
+
+.text::-webkit-scrollbar {
+  width: 10px;
+}
+
+.text::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.text::-webkit-scrollbar-thumb {
+  border-width: 2px 20px 10px 20px;
+  border-style: solid;
+  border-color: transparent;
+  background-clip: content-box;
+  background-color: #d98d5dab;
+}
+
+.alerts {
+  z-index: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 134px;
+  text-align: start;
+  padding-top: 12px;
+
+  writing-mode: vertical-lr;
+  font-size: 30px;
+  font-weight: 400;
+
+  margin-right: 14px;
+
+  border-radius: 20px;
+  border: 1px;
+  border-style: solid;
+  border-color: #f94149;
+  color: #f94149;
+  box-shadow: rgba(240, 46, 170, 0.4) -5px -5px,
+    rgba(240, 46, 170, 0.3) -10px -10px, rgba(240, 46, 170, 0.2) -15px -15px,
+    rgba(240, 46, 170, 0.1) -20px -20px, rgba(240, 46, 170, 0.05) -25px -25px;
+
+  transform: scale(-1, -1);
 }
 
 /*for small screens such as smartphones*/

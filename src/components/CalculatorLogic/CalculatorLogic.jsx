@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Keyboard, Display } from '@components'
 import * as styles from './CalculatorLogic.module.css'
 
 function CalculatorLogic() {
   const max = 9
 
+  const [error, setError] = useState(false)
   const [value, setValue] = useState('0')
   const [stockValues, setStockValues] = useState([]) // [{value: 100, operator: '+'}, {value: 200, operator: '-'}]
   const [previous, setPrevious] = useState(null)
@@ -92,9 +93,22 @@ function CalculatorLogic() {
     { value: '=', type: 'operator', action: handleEqual, key: 'Enter' },
   ]
 
+  useEffect(() => {
+    if (value.toString().length >= max) {
+      setError('9 max')
+    } else if (
+      value.toString().includes('Infinity') ||
+      value.toString().includes('NaN')
+    ) {
+      setError('Oops!')
+    } else {
+      setError(false)
+    }
+  }, [value])
+
   return (
     <div className={styles.container}>
-      <Display text={value} crop={handleCrop} max={max} />
+      <Display text={value} crop={handleCrop} max={max} error={error} />
       <Keyboard keys={keys} />
     </div>
   )
