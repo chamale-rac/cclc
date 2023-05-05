@@ -21,7 +21,7 @@ export default function ErrorPage() {
       }}
     >
       <img
-        src="/calc.svg"
+        src="./calc.svg"
         style={{
           width: '10rem',
           height: '10rem',
