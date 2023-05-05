@@ -42,16 +42,16 @@
   transform: translateY(4px) translateX(4px);
 }
 
-._function {
-}
-
-.operator {
-}
-
-.digit,
-.decimal {
-}
-
 .zero {
   grid-area: zero;
+}
+
+@media (max-width: 768px) {
+  .key {
+    font-size: 28px;
+  }
+}
+
+.key {
+  -webkit-tap-highlight-color: transparent;
 }

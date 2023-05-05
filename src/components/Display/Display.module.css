@@ -1,7 +1,7 @@
 .container {
   font-family: 'TT Bricks Trial', sans-serif;
-  height: 18vh;
-  width: 100vw;
+  height: 17vh;
+  width: 94vw;
 
   background-color: #c2f30a;
   color: #f94149;
@@ -104,6 +104,21 @@
 
 /*for medium-sized screens such as tablets and smaller laptops*/
 @media (max-width: 768px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+  }
+
+  .text {
+    padding-inline: 10px;
+    font-size: 70px;
+  }
+
+  .alerts {
+    font-size: 18px;
+    height: 90%;
+  }
 }
 
 /*for larger screens such as laptops and desktops*/

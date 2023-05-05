@@ -1,6 +1,6 @@
 .container {
-  height: 82vh;
-  width: 100vw;
+  height: 80vh;
+  width: 94vw;
   display: grid;
   background-color: #c2f30a;
 }
@@ -18,4 +18,12 @@
     '. . . .'
     '. . . .'
     'zero zero . .';
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
 }
