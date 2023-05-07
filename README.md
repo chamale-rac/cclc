@@ -1,5 +1,5 @@
 # Web Systems and Technologies - Laboratory 9
-## Basic calculator for Vitest testing practice 👨‍🔬⚗️🔬
+Basic calculator for Vitest testing practice 👨‍🔬⚗️🔬
 
 ## Rubric accomplishment
 
